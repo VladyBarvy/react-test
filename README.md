@@ -5,7 +5,8 @@
 git clone git@github.com:VladyBarvy/react-test.git
 ```
 
-
+(А если был склонирован посредством команды ```git clone git@github.com:VladyBarvy/react-test.git``` уже готовый и развивающийся репозиторий,
+то необходимо перейти в папку react-test-project и выполнить команду ```npm install```)
 
 
 
@@ -53,3 +54,11 @@ Done. Now run:
 ```
 npm run dev
 ```
+
+
+Для того, чтобы на GitHub Pages обновилось React-приложение, необходимо в терминале выполнить команду:
+```
+npm run deploy
+```
+Эта информация на сайте: https://dev.to/rashidshamloo/deploying-vite-react-app-to-github-pages-35hf?ysclid=m1l7c2qgxt55071255
+

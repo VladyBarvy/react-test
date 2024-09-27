@@ -2,9 +2,19 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Greetings from "./Greetings";
+import Congratulations from "./Congratulations";
+import SimpleForm from "./SimpleForm";
+import Calculator from "./Calculator";
 
 // https://habr.com/ru/companies/ruvds/articles/428077/
-const Greetings = (props) => <div>Hey you! {props.firstName} {props.lastName}!</div>;
+//const Greetings = (props) => <div>Hey you! {props.firstName} {props.lastName}!</div>;
+//const Сongratulations = ({ firstName, lastName }) => <div>You are so good, my sweetheart {firstName} {lastName}!</div>;
+
+
+
+
+
 
 function HiBorsy() {
 
@@ -28,8 +38,16 @@ function App() {
 
 
 
-<div>
+  <div>
     <Greetings firstName="John" lastName="Smith" />
+  </div>
+
+  <div>
+    <SimpleForm />
+  </div>
+
+  <div>
+    <Calculator />
   </div>
 
 
@@ -41,6 +59,9 @@ function App() {
       </div>
     </div>
 
+    <div className="card">
+      <Congratulations firstName="Borsy" lastName="kun" />
+    </div>
 
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
