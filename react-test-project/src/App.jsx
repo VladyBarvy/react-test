@@ -26,6 +26,16 @@ function HiBorsy() {
 }
 
 
+
+
+
+
+
+
+
+
+
+
 function App() {
   const [count, setCount] = useState(0)
   const titleDom =<h4 className="card-title">Hello!</h4>;
@@ -71,9 +81,22 @@ function App() {
         <button onClick={() => <HiBorsy />}>Biarsu</button>
       </div>
 
-   
+ 
 
-{/*     
+
+
+</>
+    
+  )
+}
+
+export default App
+
+
+
+
+
+/*     
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -95,13 +118,4 @@ function App() {
         Click on the Vite and React logos to learn more
       </p> 
       
-*/}
-
-
-
-</>
-    
-  )
-}
-
-export default App
+*/
