@@ -1,0 +1,28 @@
+.labelStyle {
+  margin-bottom: 10px;
+  font-family: 'Century Gothic', sans-serif;
+}
+
+.inputStyle {
+  margin-bottom: 20px;
+  width: 160px;
+  height: 20px;
+}
+
+.selectStyle {
+  width: 60px; /* Ширина списка в пикселах */
+  margin-left: 20px;
+}
+
+.forms_style_edition {
+  text-align: left;
+
+  border-radius: 10px;
+  box-shadow: 0 0 7px 3px #d1d6d6;
+ /* text-indent: 30px;*/
+  padding: 10px 20px 10px 20px;
+  margin: 20px;
+  width: 250px;
+  background: #ffffff;
+
+ }
