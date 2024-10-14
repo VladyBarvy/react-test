@@ -3,44 +3,51 @@ import './Calculate.css'
 
 // https://habr.com/ru/companies/ruvds/articles/436032/
 
+
+function clearValues() {
+  setR1("");
+  setR2("");
+  setVin("");
+  setOutput("");
+}
+
+
+
+
+function calculate() {
+    
+  if (r1 === "" || r2 === "" || vin === "") {
+    alert("Пожалуйста, введите все значения!");
+    return;
+  }
+
+  const _r1 = parseFloat(r1);
+  const _r2 = parseFloat(r2);
+  const _vin = parseFloat(vin);
+
+  if (Number.isNaN(_r1) || Number.isNaN(_r2) || Number.isNaN(_vin)) {
+    alert("Все значения должны быть числами!");
+    return;
+  }
+
+  const vout = (_r2 / (_r1 + _r2)) * _vin;
+  setOutput(vout.toFixed(6));
+}
+
+
+
+
+
+
+
+
+
+
 function Calculator() {
   const [r1, setR1] = useState("");
   const [r2, setR2] = useState("");
   const [vin, setVin] = useState("");
   const [output, setOutput] = useState("");
-
-
-
-  function clearValues() {
-    setR1("");
-    setR2("");
-    setVin("");
-    setOutput("");
-  }
-
-
-
-  function calculate() {
-    
-    if (r1 === "" || r2 === "" || vin === "") {
-      alert("Пожалуйста, введите все значения!");
-      return;
-    }
-
-    const _r1 = parseFloat(r1);
-    const _r2 = parseFloat(r2);
-    const _vin = parseFloat(vin);
-
-    if (Number.isNaN(_r1) || Number.isNaN(_r2) || Number.isNaN(_vin)) {
-      alert("Все значения должны быть числами!");
-      return;
-    }
-
-    const vout = (_r2 / (_r1 + _r2)) * _vin;
-    setOutput(vout.toFixed(6));
-  }
-
-
 
   return (
     <div>

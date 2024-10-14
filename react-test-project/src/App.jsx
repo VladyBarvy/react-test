@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -8,6 +8,14 @@ import SimpleForm from "./SimpleForm";
 import Calculator from "./Calculator";
 import ResistorDividerCalculator from "./ResistorDividerCalculator"
 import InputForm from "./InputForm"
+import Borsy from "./Borsy";
+import Weather from './Weather';
+import EmailForm from './EmailForm';
+import Hello from './Hello';
+import Goodbye from './Goodbye';
+import CardOne from './CardOne.jsx';
+import CardTwo from './CardTwo.jsx';
+
 
 // https://habr.com/ru/companies/ruvds/articles/428077/
 //const Greetings = (props) => <div>Hey you! {props.firstName} {props.lastName}!</div>;
@@ -38,71 +46,43 @@ const Greetings = ({ firstName, lastName, resistanceOne }) => (
 
 
 
+//const vdom = <Borsy>some text</Borsy>;
+
+
+// WeatherAPI Key: 1534fae249c04858b82121313241410
+
+
+// https://www.weatherapi.com/
+
 
 
 
 
 function App() {
-  const [count, setCount] = useState(0)
-  const titleDom =<h4 className="card-title">Hello!</h4>;
 
-  const [page, setPage] = useState(1); // 1 — первая страница, 2 — вторая страница
+  const [state, setState] = useState('Токио');
+
+  // const [count, setCount] = useState(0)
+  // const titleDom =<h4 className="card-title">Hello!</h4>;
+
+  // const [page, setPage] = useState(1); // 1 — первая страница, 2 — вторая страница
 
 
   return (
     
 
     <>
-
-    <div class="header-h1">
-      <h1 class="change-text">РЕЗИСТИВНЫЙ ДЕЛИТЕЛЬ НАПРЯЖЕНИЯ</h1>
-    </div>
-
-    <table  class ="table">  
       
-      <tr>
-
-
-        <th align="center">  
-          <form id="form">
-
-            <div>
-              <Calculator />
-            </div>
+      <div class="container">
+        <h1 className="boberNoid">City-Weather</h1>
+        {state === 'Токио' ?  <CardOne cityName="Токио" /> : <CardTwo cityName="Санкт-Петербург" />}    
+        <button onClick={() => state === 'Токио' ? setState('Санкт-Петербург') : setState('Токио')}>Другой город</button>
+      </div>
 
 
 
 
-          </form>
-        </th>
-
-
-
-
-
-
-
-      </tr>
-
-
-    </table>
-
-
-
-
-     
-      <button onClick={() => setPage(2)}>Перейти на вторую страницу</button>
-
-      {page === 2 && (
-        <div>
-          {/* Здесь будет отображаться содержимое второй страницы */}
-          <button onClick={() => setPage(1)}>Вернуться на первую страницу</button>
-        </div>
-      )}
-
-
-
-</>
+    </>
     
   )
 }
@@ -114,6 +94,87 @@ export default App
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* <div>
+      <Weather />
+    </div> */
+
+
+    /* <div>
+      <EmailForm />
+    </div> */
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+/*
+    <button onClick={() => setPage(2)}>Перейти на вторую страницу</button>
+
+    {page === 2 && (
+      <div>
+        
+        <button onClick={() => setPage(1)}>Вернуться на первую страницу</button>
+      </div>
+    )}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* <button class="btn outline">DETAILS</button>
+  <button class="btn fill">BUY NOW</button> */
 
 
 
@@ -227,3 +288,39 @@ export default App
   </div>
 
   */
+
+
+
+
+
+
+
+  /* 
+    <div class="header-h1">
+      <h1 class="change-text">РЕЗИСТИВНЫЙ ДЕЛИТЕЛЬ НАПРЯЖЕНИЯ</h1>
+    </div>
+
+    <table  class ="table">  
+      <tr>
+        <th align="center">  
+          <form id="form">
+
+            <div>
+              <Calculator />
+            </div>
+
+            <div>
+              <Borsy>some text</Borsy>
+            </div>
+
+          </form>
+        </th>
+      </tr>
+    </table> */
+
+
+
+
+
+
+  /* <CardOne cityName="Токио" />  */
