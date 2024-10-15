@@ -15,6 +15,9 @@ import Hello from './Hello';
 import Goodbye from './Goodbye';
 import CardOne from './CardOne.jsx';
 import CardTwo from './CardTwo.jsx';
+import StateTest from './StateTest.jsx';
+import Carousel from './Carousel.jsx';
+import UserList from './UserList.jsx';
 
 
 // https://habr.com/ru/companies/ruvds/articles/428077/
@@ -55,6 +58,14 @@ const Greetings = ({ firstName, lastName, resistanceOne }) => (
 // https://www.weatherapi.com/
 
 
+// const images = [
+//   './first.jpg',
+//   './second.jpg',
+//   './third.jpg',
+// ];
+
+
+
 
 
 
@@ -72,11 +83,22 @@ function App() {
     
 
     <>
-      
-      <div class="container">
-        <h1 className="boberNoid">City-Weather</h1>
-        {state === 'Токио' ?  <CardOne cityName="Токио" /> : <CardTwo cityName="Санкт-Петербург" />}    
-        <button onClick={() => state === 'Токио' ? setState('Санкт-Петербург') : setState('Токио')}>Другой город</button>
+      <div>
+        <div className="container">
+          <h1 className="boberNoid">City-Weather</h1>
+          {state === 'Токио' ?  <CardOne cityName="Токио" /> : <CardTwo cityName="Санкт-Петербург" />}    
+          <button onClick={() => state === 'Токио' ? setState('Санкт-Петербург') : setState('Токио')}>Другой город</button>
+        </div>
+
+        <hr/>
+
+        <div>
+          <Carousel />
+        </div>
+
+        <div>
+          <UserList />
+        </div>
       </div>
 
 
@@ -125,7 +147,11 @@ export default App
 
 
 
-
+/*
+      <div>
+        <StateTest />
+      </div>
+*/
 
     /* <div>
       <Weather />

@@ -1,0 +1,18 @@
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.slider-image {
+  max-width: 600px;
+  max-height: 400px;
+  margin: 0 20px;
+}

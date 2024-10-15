@@ -6,10 +6,17 @@ import Hello from './Hello';
 import Goodbye from './Goodbye';
 import './CardOne.css'
 
+
+
 const CardOne = ( {cityName} ) => {
 
+
+
+
   let town = "Tokyo";
-//class="wrapper"
+
+
+
   return (
 
 
@@ -22,8 +29,9 @@ const CardOne = ( {cityName} ) => {
  
       <div class="button-wrapper"> 
         {<Weather cityTemp={town} />} 
-   
-      </div> 
+      </div>
+
+
 
     </div>
 
