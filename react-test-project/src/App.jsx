@@ -18,6 +18,8 @@ import CardTwo from './CardTwo.jsx';
 import StateTest from './StateTest.jsx';
 import Carousel from './Carousel.jsx';
 import UserList from './UserList.jsx';
+import TestForm from './TestForm.jsx';
+
 
 
 // https://habr.com/ru/companies/ruvds/articles/428077/
@@ -84,21 +86,56 @@ function App() {
 
     <>
       <div>
-        <div className="container">
+
+
+
+        {/* <div className="container">
           <h1 className="boberNoid">City-Weather</h1>
           {state === 'Токио' ?  <CardOne cityName="Токио" /> : <CardTwo cityName="Санкт-Петербург" />}    
           <button onClick={() => state === 'Токио' ? setState('Санкт-Петербург') : setState('Токио')}>Другой город</button>
-        </div>
+        </div> */}
 
-        <hr/>
 
-        <div>
+
+        {/* <div>
           <Carousel />
         </div>
 
         <div>
           <UserList />
+        </div> */}
+
+        <hr/>
+
+        <div>
+          <TestForm />
         </div>
+
+        <hr/>
+
+        <div>
+          <Hello text="initial text" />
+        </div>
+
+        <hr/>
+
+        <div>
+          <Goodbye />
+        </div>
+
+        <hr/>
+
+        <div>
+          <Greetings />
+        </div>
+
+
+        <hr/>
+
+        <div>
+          <Congratulations />
+        </div>
+
       </div>
 
 
@@ -112,7 +149,9 @@ function App() {
 export default App
 
 
-
+/*
+((ideal perfect huge breasts))
+*/
 
 
 
