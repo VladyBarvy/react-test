@@ -69,6 +69,17 @@ const Greetings = ({ firstName, lastName, resistanceOne }) => (
 
 
 
+// для проверки chidren
+const Container = ({ children }) => {
+  return (
+      <div style={{ border: '1px solid black', padding: '10px' }}>
+          <h2>Контейнер</h2>
+          {children}
+      </div>
+  );
+};
+
+
 
 
 function App() {
@@ -134,6 +145,16 @@ function App() {
 
         <div>
           <Congratulations />
+        </div>
+
+
+        <hr/>
+
+        <div>
+          <Container>
+            <p style={{color: 'red'}}>Это содержимое внутри контейнера.</p>
+            <button>Нажми меня</button>
+          </Container>
         </div>
 
       </div>

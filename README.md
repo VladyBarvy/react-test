@@ -60,5 +60,37 @@ npm run dev
 ```
 npm run deploy
 ```
+
 Эта информация на сайте: https://dev.to/rashidshamloo/deploying-vite-react-app-to-github-pages-35hf?ysclid=m1l7c2qgxt55071255
 
+
+
+
+// ---------------------------------------------------------------------------------------------------------------------------
+
+Если деплой на GitHub Pages производится впервые в проекте, то необходимо выполнить следующие шаги:
+1) установить библиотеку gh-pages, выполнив следующую команду:
+```
+npm install gh-pages --save-dev
+```
+
+2) Добавьте в package.json следующие поля:
+```
+"homepage": "https://<ваш-логин>.github.io/<имя-репозитория>",
+"scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+}
+```
+
+3) запушить изменения в проекте на удалённый репозиторий на GitHub:
+```
+git add -A
+git commit -m "Deploy React app"
+git push origin main
+```
+
+4) и уже потом выполнить деплой:
+```
+npm run deploy
+```
